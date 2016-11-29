@@ -23,6 +23,14 @@
     
     // 设置背景颜色
     self.view.backgroundColor = [UIColor orangeColor];
+    
+    UILabel *textLable = [[UILabel alloc] init];
+    textLable.text = @"已经进入App首页喽！！！";
+    textLable.textColor = [UIColor whiteColor];
+    textLable.font = [UIFont boldSystemFontOfSize:18];
+    [textLable sizeToFit];
+    textLable.center = self.view.center;
+    [self.view addSubview:textLable];
 }
 
 

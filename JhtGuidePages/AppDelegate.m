@@ -21,33 +21,49 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSArray *backgroundImageNames = @[@"ggps_1_bg", @"ggps_2_bg", @"ggps_3_bg", @"ggps_4_bg"];
-    NSArray *coverImageNames = @[@"ggps_1_text", @"ggps_2_text", @"ggps_3_text", @"ggps_4_text"];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *firstKey = [NSString stringWithFormat:@"isFirst%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+    NSString *isFirst = [defaults objectForKey:firstKey];
     
-    // Example 1
-//    self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:backgroundImageNames];
-    
-    // Example 2
-//    self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames];
-    
-    // Example 3
-    UIButton *enterButton = [[UIButton alloc] init];
-    // case 1
-//    [enterButton setTitle:@"点击进入" forState:UIControlStateNormal];
-//    [enterButton setTitleColor:[UIColor colorWithRed:0.92f green:0.43f blue:0.71f alpha:1.00f] forState:UIControlStateNormal];
-    // case 2
-    [enterButton setBackgroundImage:[UIImage imageNamed:@"enter_btn"] forState:UIControlStateNormal];
-    self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames withEnterButton:enterButton];
-    
-    // 添加《跳过》按钮
-    self.introductionView.isNeedSkipButton = YES;
-    
-    self.window.rootViewController = self.introductionView;
-    
-    __weak AppDelegate *weakSelf = self;
-    self.introductionView.didClickedEnter = ^() {
-        weakSelf.window.rootViewController = [[ViewController alloc] init];
-    };
+    if (!isFirst.length) {
+        NSArray *backgroundImageNames = @[@"ggps_1_bg", @"ggps_2_bg", @"ggps_3_bg", @"ggps_4_bg"];
+        NSArray *coverImageNames = @[@"ggps_1_text", @"ggps_2_text", @"ggps_3_text", @"ggps_4_text"];
+        
+        // NO.1
+//        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:backgroundImageNames];
+        
+        // NO.2
+//        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames];
+        
+        // NO.3
+        UIButton *enterButton = [[UIButton alloc] init];
+        // case 1
+//        [enterButton setTitle:@"点击进入" forState:UIControlStateNormal];
+//        [enterButton setTitleColor:[UIColor colorWithRed:0.92f green:0.43f blue:0.71f alpha:1.00f] forState:UIControlStateNormal];
+        // case 2
+        [enterButton setBackgroundImage:[UIImage imageNamed:@"enter_btn"] forState:UIControlStateNormal];
+        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames withEnterButton:enterButton];
+        
+        // 添加《跳过》按钮
+        self.introductionView.isNeedSkipButton = YES;
+        
+        self.window.rootViewController = self.introductionView;
+        
+        __weak AppDelegate *weakSelf = self;
+        self.introductionView.didClickedEnter = ^() {
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            NSString *firstKey = [NSString stringWithFormat:@"isFirst%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+            NSString *isFirst = [defaults objectForKey:firstKey];
+            if (!isFirst) {
+                [defaults setObject:@"notFirst" forKey:firstKey];
+                [defaults synchronize];
+            }
+            
+            weakSelf.window.rootViewController = [[ViewController alloc] init];
+        };
+    } else {
+        self.window.rootViewController = [[ViewController alloc] init];
+    }
     
     return YES;
 }
