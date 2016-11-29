@@ -8,7 +8,7 @@
 ### Function Description
 1. 传统引导页功能；
 2. 引导页之间渐变切换；
-3. 个性化进入按钮实现；<br>
+3. 个性化进入按钮实现。<br>
 
 
 ### How to use
