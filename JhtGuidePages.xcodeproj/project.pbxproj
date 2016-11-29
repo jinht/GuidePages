@@ -15,8 +15,8 @@
 		A51F5A111DEC478300F48550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51F5A0F1DEC478300F48550 /* LaunchScreen.storyboard */; };
 		A51F5A1C1DEC478300F48550 /* JhtGuidePagesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A51F5A1B1DEC478300F48550 /* JhtGuidePagesTests.m */; };
 		A51F5A271DEC478300F48550 /* JhtGuidePagesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A51F5A261DEC478300F48550 /* JhtGuidePagesUITests.m */; };
-		A536FACC1DED636B00819739 /* JhtGuidePagesSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536FACA1DED636B00819739 /* JhtGuidePagesSDK.a */; };
-		A536FACD1DED636B00819739 /* skip_button.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A536FACB1DED636B00819739 /* skip_button.bundle */; };
+		A536FAD21DED747800819739 /* JhtGuidePagesSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536FAD01DED747800819739 /* JhtGuidePagesSDK.a */; };
+		A536FAD31DED747800819739 /* skip_button.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A536FAD11DED747800819739 /* skip_button.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +53,9 @@
 		A51F5A221DEC478300F48550 /* JhtGuidePagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtGuidePagesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51F5A261DEC478300F48550 /* JhtGuidePagesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhtGuidePagesUITests.m; sourceTree = "<group>"; };
 		A51F5A281DEC478300F48550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A536FAC91DED636B00819739 /* JhtGradientGuidePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhtGradientGuidePageVC.h; sourceTree = "<group>"; };
-		A536FACA1DED636B00819739 /* JhtGuidePagesSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JhtGuidePagesSDK.a; sourceTree = "<group>"; };
-		A536FACB1DED636B00819739 /* skip_button.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = skip_button.bundle; sourceTree = "<group>"; };
+		A536FACF1DED747800819739 /* JhtGradientGuidePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhtGradientGuidePageVC.h; sourceTree = "<group>"; };
+		A536FAD01DED747800819739 /* JhtGuidePagesSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JhtGuidePagesSDK.a; sourceTree = "<group>"; };
+		A536FAD11DED747800819739 /* skip_button.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = skip_button.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A536FACC1DED636B00819739 /* JhtGuidePagesSDK.a in Frameworks */,
+				A536FAD21DED747800819739 /* JhtGuidePagesSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +111,7 @@
 				A51F5A051DEC478300F48550 /* AppDelegate.m */,
 				A51F5A071DEC478300F48550 /* ViewController.h */,
 				A51F5A081DEC478300F48550 /* ViewController.m */,
-				A536FAC81DED636B00819739 /* JhtGuidePagesSDK */,
+				A536FACE1DED747800819739 /* JhtGuidePagesSDK */,
 				A51F5A0A1DEC478300F48550 /* Main.storyboard */,
 				A51F5A0D1DEC478300F48550 /* Assets.xcassets */,
 				A51F5A0F1DEC478300F48550 /* LaunchScreen.storyboard */,
@@ -147,12 +147,12 @@
 			path = JhtGuidePagesUITests;
 			sourceTree = "<group>";
 		};
-		A536FAC81DED636B00819739 /* JhtGuidePagesSDK */ = {
+		A536FACE1DED747800819739 /* JhtGuidePagesSDK */ = {
 			isa = PBXGroup;
 			children = (
-				A536FAC91DED636B00819739 /* JhtGradientGuidePageVC.h */,
-				A536FACA1DED636B00819739 /* JhtGuidePagesSDK.a */,
-				A536FACB1DED636B00819739 /* skip_button.bundle */,
+				A536FACF1DED747800819739 /* JhtGradientGuidePageVC.h */,
+				A536FAD01DED747800819739 /* JhtGuidePagesSDK.a */,
+				A536FAD11DED747800819739 /* skip_button.bundle */,
 			);
 			path = JhtGuidePagesSDK;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A536FACD1DED636B00819739 /* skip_button.bundle in Resources */,
+				A536FAD31DED747800819739 /* skip_button.bundle in Resources */,
 				A51F5A111DEC478300F48550 /* LaunchScreen.storyboard in Resources */,
 				A51F5A0E1DEC478300F48550 /* Assets.xcassets in Resources */,
 				A51F5A0C1DEC478300F48550 /* Main.storyboard in Resources */,
