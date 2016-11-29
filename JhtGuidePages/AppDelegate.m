@@ -11,14 +11,13 @@
 #import "JhtGradientGuidePageVC.h"
 
 @interface AppDelegate ()
-
 /** 引导页VC */
 @property (nonatomic, strong) JhtGradientGuidePageVC *introductionView;
 
 @end
 
-@implementation AppDelegate
 
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
