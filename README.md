@@ -30,7 +30,7 @@
 ```
 
 #### 3 简洁的个性化设置UI及切换动画
-##### 3.1 设置`<Enter>`按钮
+##### 3.1 设置`<Enter>`按钮，可以通过初始化方法传入自己定制的`<Enter>`按钮
 ```oc
 /** 初始化方法
  *  coverNames：封面图片名数组（多为带文字图片）
@@ -52,12 +52,13 @@
  */
 @property (nonatomic, copy) NSString *exitAnimationType;
 ```
-注：假使自己传入<跳过>按钮背景图片，需要注意一下大小，按钮大小设置是根据图片大小动态设置的；另外，在添加引导页退出切换动画类型时，需要注意一下demo中`AppDelegate.m`的`didClickedEnter`block内部写法，如下：
+注：1.假使自己传入<跳过>按钮背景图片，需要注意一下大小，按钮大小设置是根据图片大小动态设置的；<br>
+    2.在添加引导页退出切换动画类型时，需要注意一下demo中`AppDelegate.m`的`didClickedEnter`block内部写法，如下：
 ```oc
 // 添加引导页退出切换动画时，切记这样写！！！
 [weakSelf.window.rootViewController.view addSubview:[[ViewController alloc] init].view];
 ```
-
+    
 
 ###Remind
 * ARC
