@@ -39,12 +39,14 @@
         // case 1
 //        [enterButton setTitle:@"点击进入" forState:UIControlStateNormal];
 //        [enterButton setTitleColor:[UIColor colorWithRed:0.92f green:0.43f blue:0.71f alpha:1.00f] forState:UIControlStateNormal];
-        // case 2
+//     case 2
         [enterButton setBackgroundImage:[UIImage imageNamed:@"enter_btn"] forState:UIControlStateNormal];
         self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames withEnterButton:enterButton];
         
         // 添加《跳过》按钮
         self.introductionView.isNeedSkipButton = YES;
+        // 引导页退出切换动画类型（不传值为不添加切换动画，默认不添加动画）
+        self.introductionView.exitAnimationType = @"fade";
         
         self.window.rootViewController = self.introductionView;
         
@@ -58,7 +60,8 @@
                 [defaults synchronize];
             }
             
-            weakSelf.window.rootViewController = [[ViewController alloc] init];
+            // 添加引导页退出切换动画时，切记这样写！！！
+            [weakSelf.window.rootViewController.view addSubview:[[ViewController alloc] init].view];
         };
     } else {
         self.window.rootViewController = [[ViewController alloc] init];

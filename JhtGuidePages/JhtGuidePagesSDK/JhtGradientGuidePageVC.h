@@ -32,6 +32,11 @@ typedef void (^DidClickedEnter)();
 /** 点击<Enter>按钮触发方法 */
 @property (nonatomic, copy) DidClickedEnter didClickedEnter;
 
+/** 引导页退出切换动画类型（不传值为不添加切换动画，默认不添加动画）
+ *  @"fade" || @"moveIn" || @"push" || @"reveal" 建议使用：@"fade" 类型
+ */
+@property (nonatomic, copy) NSString *exitAnimationType;
+
 
 
 #pragma mark - Public Method
