@@ -8,7 +8,7 @@
 ### Function Description
 1. 传统引导页功能；
 2. 引导页之间渐变切换；
-3. 个性化进入按钮实现。<br>
+3. 简洁的个性化设置UI及切换动画。<br>
 
 
 ### How to use
@@ -29,13 +29,9 @@
 - (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames;
 ```
 
-#### 3. 个性化进入按钮实现：通过相应属性设置`<跳过>`按钮和`<Enter>`按钮
+#### 3 简洁的个性化设置UI及切换动画
+##### 3.1 设置`<Enter>`按钮
 ```oc
-/** 是否添加<跳过>按钮（默认不需要） */
-@property (nonatomic, assign) BOOL isNeedSkipButton;
-/** <跳过>按钮背景图片名 */
-@property (nonatomic, copy) NSString *skipButtonBackgroundImageName;
-
 /** 初始化方法
  *  coverNames：封面图片名数组（多为带文字图片）
  *  bgNames：背景图片名数组
@@ -43,7 +39,25 @@
  */
 - (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames withEnterButton:(UIButton *)button;
 ```
-注：假使自己传入<跳过>按钮背景图片，需要注意一下大小，按钮大小设置是根据图片大小动态设置的。
+
+##### 3.2 设置`<跳过>`按钮 && `exitAnimationType`
+##### 3.1 设置`<Enter>`按钮
+```oc
+/** 是否添加<跳过>按钮（默认不需要） */
+@property (nonatomic, assign) BOOL isNeedSkipButton;
+/** <跳过>按钮背景图片名 */
+@property (nonatomic, copy) NSString *skipButtonBackgroundImageName;
+
+/** 引导页退出切换动画类型（不传值为不添加切换动画，默认不添加动画）
+ *  @"fade" || @"moveIn" || @"push" || @"reveal" 建议使用：@"fade" 类型
+ */
+@property (nonatomic, copy) NSString *exitAnimationType;
+```
+注：假使自己传入<跳过>按钮背景图片，需要注意一下大小，按钮大小设置是根据图片大小动态设置的；另外，在添加引导页退出切换动画类型时，需要注意一下demo中`AppDelegate.m`的`didClickedEnter`block内部写法，如下：
+```oc
+// 添加引导页退出切换动画时，切记这样写！！！
+[weakSelf.window.rootViewController.view addSubview:[[ViewController alloc] init].view];
+```
 
 
 ###Remind
