@@ -41,7 +41,6 @@
 ```
 
 ##### 3.2 设置`<跳过>`按钮 && `exitAnimationType`
-##### 3.1 设置`<Enter>`按钮
 ```oc
 /** 是否添加<跳过>按钮（默认不需要） */
 @property (nonatomic, assign) BOOL isNeedSkipButton;
