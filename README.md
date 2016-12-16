@@ -40,7 +40,17 @@
 - (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames withEnterButton:(UIButton *)button;
 ```
 
-##### 3.2 设置`<跳过>`按钮 && `exitAnimationType`
+#### 3.2 设置`pageControl`，可以通过以下参数设置pageControl
+```oc
+/** 是否隐藏pageControl（默认不隐藏） */
+@property (nonatomic, assign) BOOL isHiddenPageControl;
+/** pageControl的Y坐标(默认距离底部30.0)  */
+@property (nonatomic, assign) CGFloat pageControlY;
+/** pageControl的pageIndicatorTintColor（默认[UIColor grayColor]） */
+@property (nonatomic, strong) UIColor *pageIndicatorTintColor;
+```
+
+##### 3.3 设置`<跳过>`按钮 && `exitAnimationType`
 ```oc
 /** 是否添加<跳过>按钮（默认不需要） */
 @property (nonatomic, assign) BOOL isNeedSkipButton;
