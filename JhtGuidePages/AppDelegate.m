@@ -60,8 +60,8 @@
             NSString *firstKey = [NSString stringWithFormat:@"isFirst%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
             NSString *isFirst = [defaults objectForKey:firstKey];
             if (!isFirst) {
-//                [defaults setObject:@"notFirst" forKey:firstKey];
-//                [defaults synchronize];
+                [defaults setObject:@"notFirst" forKey:firstKey];
+                [defaults synchronize];
             }
             
             // 添加引导页退出切换动画时，切记这样写！！！
