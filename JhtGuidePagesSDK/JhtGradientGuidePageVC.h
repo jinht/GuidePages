@@ -32,10 +32,19 @@ typedef void (^DidClickedEnter)();
 /** 点击<Enter>按钮触发方法 */
 @property (nonatomic, copy) DidClickedEnter didClickedEnter;
 
+
+#pragma mark @optional
 /** 引导页退出切换动画类型（不传值为不添加切换动画，默认不添加动画）
  *  @"fade" || @"moveIn" || @"push" || @"reveal" 建议使用：@"fade" 类型
  */
 @property (nonatomic, copy) NSString *exitAnimationType;
+
+/** 是否隐藏pageControl（默认不隐藏） */
+@property (nonatomic, assign) BOOL isHiddenPageControl;
+/** pageControl的Y坐标(默认距离底部30.0)  */
+@property (nonatomic, assign) CGFloat pageControlY;
+/** pageControl的pageIndicatorTintColor（默认[UIColor grayColor]） */
+@property (nonatomic, strong) UIColor *pageIndicatorTintColor;
 
 
 
