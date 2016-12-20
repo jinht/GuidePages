@@ -35,7 +35,7 @@
 //        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames];
         
         // NO.3
-        UIButton *enterButton = [[UIButton alloc] init];
+        UIButton *enterButton = [[UIButton alloc] initWithFrame:CGRectMake((CGRectGetWidth([UIScreen mainScreen].bounds) - 100) / 2, CGRectGetHeight([UIScreen mainScreen].bounds) - 30 - 50, 100, 30)];
         // case 1
 //        [enterButton setTitle:@"点击进入" forState:UIControlStateNormal];
 //        [enterButton setTitleColor:[UIColor colorWithRed:0.92f green:0.43f blue:0.71f alpha:1.00f] forState:UIControlStateNormal];
