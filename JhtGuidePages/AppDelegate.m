@@ -29,19 +29,17 @@
         NSArray *coverImageNames = @[@"ggps_1_text", @"ggps_2_text", @"ggps_3_text", @"ggps_4_text"];
         
         // NO.1
-//        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:backgroundImageNames];
+//    self.introductionView = [[JhtGradientGuidePageVC alloc] initWithGuideImageNames:backgroundImageNames];
         
         // NO.2
-//        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames];
+    self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames];
+    self.introductionView.pageControlY = CGRectGetHeight([UIScreen mainScreen].bounds) - 60;
+    self.introductionView.pageIndicatorTintColor = [UIColor redColor];
         
         // NO.3
-        UIButton *enterButton = [[UIButton alloc] initWithFrame:CGRectMake((CGRectGetWidth([UIScreen mainScreen].bounds) - 100) / 2, CGRectGetHeight([UIScreen mainScreen].bounds) - 30 - 50, 100, 30)];
-        // case 1
-//        [enterButton setTitle:@"点击进入" forState:UIControlStateNormal];
-//        [enterButton setTitleColor:[UIColor colorWithRed:0.92f green:0.43f blue:0.71f alpha:1.00f] forState:UIControlStateNormal];
-//     case 2
-        [enterButton setBackgroundImage:[UIImage imageNamed:@"enter_btn"] forState:UIControlStateNormal];
-        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames withEnterButton:enterButton];
+//        UIButton *enterButton = [[UIButton alloc] initWithFrame:CGRectMake((CGRectGetWidth([UIScreen mainScreen].bounds) - 100) / 2, CGRectGetHeight([UIScreen mainScreen].bounds) - 30 - 50, 100, 30)];
+//        [enterButton setBackgroundImage:[UIImage imageNamed:@"enter_btn"] forState:UIControlStateNormal];
+//        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames withEnterButton:enterButton];
         
         // 添加《跳过》按钮
         self.introductionView.isNeedSkipButton = YES;

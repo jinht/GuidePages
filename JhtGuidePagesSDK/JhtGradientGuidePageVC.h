@@ -50,9 +50,9 @@ typedef void (^DidClickedEnter)();
 
 #pragma mark - Public Method
 /** 初始化方法
- *  coverNames：封面图片名数组（多为带文字图片）
+ *  imageNames：引导图片数组
  */
-- (id)initWithCoverImageNames:(NSArray *)coverNames;
+- (id)initWithGuideImageNames:(NSArray *)imageNames;
 
 /** 初始化方法
  *  coverNames：封面图片名数组（多为带文字图片）
