@@ -7,7 +7,6 @@
 &emsp;<img src="https://raw.githubusercontent.com/jinht/GuidePages/master/ReadMEImages/Gif/third.gif"，width=250 height=420 />
 
 
-
 ### Function Description
 1. 传统引导页功能；
 2. 引导页之间渐变切换；
