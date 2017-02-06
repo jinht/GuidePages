@@ -19,7 +19,15 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions  {
+    // 创建引导页
+    [self createGuideVC];
+    
+     return YES;
+}
+
+/** 创建引导页 */
+- (void)createGuideVC {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *firstKey = [NSString stringWithFormat:@"isFirst%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
     NSString *isFirst = [defaults objectForKey:firstKey];
@@ -29,24 +37,29 @@
         NSArray *coverImageNames = @[@"ggps_1_text", @"ggps_2_text", @"ggps_3_text", @"ggps_4_text"];
         
         // NO.1
-//    self.introductionView = [[JhtGradientGuidePageVC alloc] initWithGuideImageNames:backgroundImageNames];
+//        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithGuideImageNames:backgroundImageNames];
         
         // NO.2
-    self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames];
-    self.introductionView.pageControlY = CGRectGetHeight([UIScreen mainScreen].bounds) - 60;
-    self.introductionView.pageIndicatorTintColor = [UIColor redColor];
+//        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames];
         
         // NO.3
+        // case 1
+        UIButton *enterButton = [[UIButton alloc] init];
+        [enterButton setTitle:@"点击进入" forState:UIControlStateNormal];
+        [enterButton setBackgroundColor:[UIColor purpleColor]];
+        enterButton.layer.cornerRadius = 8.0;
+        // case 2
 //        UIButton *enterButton = [[UIButton alloc] initWithFrame:CGRectMake((CGRectGetWidth([UIScreen mainScreen].bounds) - 100) / 2, CGRectGetHeight([UIScreen mainScreen].bounds) - 30 - 50, 100, 30)];
 //        [enterButton setBackgroundImage:[UIImage imageNamed:@"enter_btn"] forState:UIControlStateNormal];
-//        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames withEnterButton:enterButton];
+        
+        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames withEnterButton:enterButton];
         
         // 添加《跳过》按钮
         self.introductionView.isNeedSkipButton = YES;
         // 引导页退出切换动画类型（不传值为不添加切换动画，默认不添加动画）
         self.introductionView.exitAnimationType = @"fade";
         // 更改pageControl的Y坐标
-        self.introductionView.pageControlY = CGRectGetHeight([UIScreen mainScreen].bounds) - 60;
+//        self.introductionView.pageControlY = CGRectGetHeight([UIScreen mainScreen].bounds) - 60;
         // 更改pageControl的pageIndicatorTintColor
         self.introductionView.pageIndicatorTintColor = [UIColor redColor];
         
@@ -62,16 +75,13 @@
                 [defaults synchronize];
             }
             
-            // 添加引导页退出切换动画时，切记这样写！！！
+            // 添加引导页退出切换动画时，切记这样写
             [weakSelf.window.rootViewController.view addSubview:[[ViewController alloc] init].view];
         };
     } else {
         self.window.rootViewController = [[ViewController alloc] init];
     }
-    
-    return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
