@@ -20,7 +20,7 @@ typedef void (^DidClickedEnter)();
 /** 是否添加<跳过>按钮（默认不需要） */
 @property (nonatomic, assign) BOOL isNeedSkipButton;
 /** <跳过>按钮背景图片名（动态获取图片大小） */
-@property (nonatomic, copy) NSString *skipButtonBackgroundImageName;
+@property (nonatomic, strong) NSString *skipButtonBackgroundImageName;
 
 /** 背景图片名数组 */
 @property (nonatomic, strong) NSArray *backgroundImageNames;
@@ -32,12 +32,12 @@ typedef void (^DidClickedEnter)();
 /** 滑动到最后一张图片后出现的<Enter>按钮 */
 @property (nonatomic, strong) UIButton *enterButton;
 /** 点击<Enter>按钮触发方法 */
-@property (nonatomic, copy) DidClickedEnter didClickedEnter;
+@property (nonatomic, strong) DidClickedEnter didClickedEnter;
 
 /** 引导页退出切换动画类型（不传值为不添加切换动画，默认不添加动画）
  *  @"fade"(建议使用) || @"moveIn" || @"push" || @"reveal"
  */
-@property (nonatomic, copy) NSString *exitAnimationType;
+@property (nonatomic, strong) NSString *exitAnimationType;
 
 /** 是否隐藏pageControl（默认不隐藏） */
 @property (nonatomic, assign) BOOL isHiddenPageControl;

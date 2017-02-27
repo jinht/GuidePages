@@ -2,6 +2,9 @@
 //  AppDelegate.m
 //  JhtGuidePages
 //
+//  GitHub主页: https://github.com/jinht
+//  CSDN博客: http://blog.csdn.net/anticipate91
+//
 //  Created by Jht on 2016/11/28.
 //  Copyright © 2016年 Jht. All rights reserved.
 //
@@ -44,13 +47,13 @@
         
         // NO.3
         // case 1
-        UIButton *enterButton = [[UIButton alloc] init];
-        [enterButton setTitle:@"点击进入" forState:UIControlStateNormal];
-        [enterButton setBackgroundColor:[UIColor purpleColor]];
-        enterButton.layer.cornerRadius = 8.0;
+//        UIButton *enterButton = [[UIButton alloc] init];
+//        [enterButton setTitle:@"点击进入" forState:UIControlStateNormal];
+//        [enterButton setBackgroundColor:[UIColor purpleColor]];
+//        enterButton.layer.cornerRadius = 8.0;
         // case 2
-//        UIButton *enterButton = [[UIButton alloc] initWithFrame:CGRectMake((CGRectGetWidth([UIScreen mainScreen].bounds) - 100) / 2, CGRectGetHeight([UIScreen mainScreen].bounds) - 30 - 50, 100, 30)];
-//        [enterButton setBackgroundImage:[UIImage imageNamed:@"enter_btn"] forState:UIControlStateNormal];
+        UIButton *enterButton = [[UIButton alloc] initWithFrame:CGRectMake((CGRectGetWidth([UIScreen mainScreen].bounds) - 100) / 2, CGRectGetHeight([UIScreen mainScreen].bounds) - 30 - 50, 100, 30)];
+        [enterButton setBackgroundImage:[UIImage imageNamed:@"enter_btn"] forState:UIControlStateNormal];
         
         self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames withEnterButton:enterButton];
         
