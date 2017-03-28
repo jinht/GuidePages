@@ -3,8 +3,7 @@
 
 
 ### 先上图，看一下是否符合你的场景吧！
-<img src="https://raw.githubusercontent.com/jinht/GuidePages/master/ReadMEImages/Gif/first.gif"，width=250 height=420 />
-&emsp;<img src="https://raw.githubusercontent.com/jinht/GuidePages/master/ReadMEImages/Gif/third.gif"，width=250 height=420 />
+<img src="https://raw.githubusercontent.com/jinht/GuidePages/master/ReadMEImages/Gif/first.gif" width=250 height=420 />&emsp;<img src="https://raw.githubusercontent.com/jinht/GuidePages/master/ReadMEImages/Gif/third.gif" width=250 height=420 />
 
 
 ### Function Description
