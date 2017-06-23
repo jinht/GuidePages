@@ -7,9 +7,9 @@
 
 
 ### Function Description
-1. 传统引导页功能；
-2. 引导页之间渐变切换；
-3. 简洁的个性化设置UI及切换动画。<br>
+1. 传统引导页功能
+2. 引导页之间渐变切换
+3. 简洁的个性化设置UI及切换动画<br>
 
 
 ### How to use
@@ -30,7 +30,7 @@
 - (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames;
 ```
 
-#### 3 简洁的个性化设置UI及切换动画
+#### 3 简洁的个性化UI设置及切换动画
 ##### 3.1 设置`<Enter>`按钮，可以通过初始化方法传入自己定制的`<Enter>`按钮（按钮frame亦可以自己定制）
 ```oc
 /** 初始化方法
