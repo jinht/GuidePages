@@ -47,13 +47,13 @@
         
         // NO.3
         // case 1
-//        UIButton *enterButton = [[UIButton alloc] init];
-//        [enterButton setTitle:@"点击进入" forState:UIControlStateNormal];
-//        [enterButton setBackgroundColor:[UIColor purpleColor]];
-//        enterButton.layer.cornerRadius = 8.0;
+        UIButton *enterButton = [[UIButton alloc] init];
+        [enterButton setTitle:@"点击进入" forState:UIControlStateNormal];
+        [enterButton setBackgroundColor:[UIColor purpleColor]];
+        enterButton.layer.cornerRadius = 8.0;
         // case 2
-        UIButton *enterButton = [[UIButton alloc] initWithFrame:CGRectMake((CGRectGetWidth([UIScreen mainScreen].bounds) - 100) / 2, CGRectGetHeight([UIScreen mainScreen].bounds) - 30 - 50, 100, 30)];
-        [enterButton setBackgroundImage:[UIImage imageNamed:@"enter_btn"] forState:UIControlStateNormal];
+//        UIButton *enterButton = [[UIButton alloc] initWithFrame:CGRectMake((CGRectGetWidth([UIScreen mainScreen].bounds) - 100) / 2, CGRectGetHeight([UIScreen mainScreen].bounds) - 30 - 50, 100, 30)];
+//        [enterButton setBackgroundImage:[UIImage imageNamed:@"enter_btn"] forState:UIControlStateNormal];
         
         self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames withEnterButton:enterButton];
         
@@ -61,10 +61,7 @@
         self.introductionView.isNeedSkipButton = YES;
         // 引导页退出切换动画类型（不传值为不添加切换动画，默认不添加动画）
         self.introductionView.exitAnimationType = @"fade";
-        // 更改pageControl的Y坐标
-//        self.introductionView.pageControlY = CGRectGetHeight([UIScreen mainScreen].bounds) - 60;
-        // 更改pageControl的pageIndicatorTintColor
-        self.introductionView.pageIndicatorTintColor = [UIColor redColor];
+        /******** 更多个性化配置见《JhtGradientGuidePageVC.h》 ********/
         
         self.window.rootViewController = self.introductionView;
         
