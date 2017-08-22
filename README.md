@@ -70,12 +70,7 @@
 /** <跳过>按钮背景图片名 */
 @property (nonatomic, copy) NSString *skipButtonBackgroundImageName;
 ```
-注：1.假使自己传入<跳过>按钮背景图片，需要注意一下大小，按钮大小设置是根据图片大小动态设置的<br>
-&emsp;&emsp;2.在添加引导页退出切换动画类型时，需要注意一下demo中`AppDelegate.m`的`didClickedEnter`block内部写法，如下：
-```oc
-// 添加引导页退出切换动画时，切记这样写！！！
-[weakSelf.window.rootViewController.view addSubview:[[ViewController alloc] init].view];
-```
+注：假使自己传入<跳过>按钮背景图片，需要注意一下大小，按钮大小设置是根据图片大小动态设置的
     
 
 ### Remind
