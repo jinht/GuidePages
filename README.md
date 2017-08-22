@@ -41,17 +41,7 @@
 - (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames withEnterButton:(UIButton *)button;
 ```
 
-#### 3.2 设置`pageControl`，可以通过以下参数设置pageControl
-```oc
-/** 是否隐藏pageControl（默认不隐藏） */
-@property (nonatomic, assign) BOOL isHiddenPageControl;
-/** pageControl的Y坐标(默认距离底部30.0)  */
-@property (nonatomic, assign) CGFloat pageControlY;
-/** pageControl的pageIndicatorTintColor（默认[UIColor grayColor]） */
-@property (nonatomic, strong) UIColor *pageIndicatorTintColor;
-```
-
-#### 3.3 导页展示完成后切换至目标VC动画
+#### 3.2 导页展示完成后切换至目标VC动画
 ```oc
 /** 导页展示完成后切换至目标VC 动画时间
  *  default：0.5f
@@ -61,6 +51,16 @@
  *	default：UIViewAnimationOptionTransitionCrossDissolve
  */
 @property (nonatomic, assign) UIViewAnimationOptions animationOptions;
+```
+
+#### 3.3 设置`pageControl`，可以通过以下参数设置pageControl
+```oc
+/** 是否隐藏pageControl（默认不隐藏） */
+@property (nonatomic, assign) BOOL isHiddenPageControl;
+/** pageControl的Y坐标(默认距离底部30.0)  */
+@property (nonatomic, assign) CGFloat pageControlY;
+/** pageControl的pageIndicatorTintColor（默认[UIColor grayColor]） */
+@property (nonatomic, strong) UIColor *pageIndicatorTintColor;
 ```
 
 ##### 3.4 设置`<跳过>`按钮 && `exitAnimationType`
