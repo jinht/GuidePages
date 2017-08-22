@@ -6,7 +6,7 @@
 //  CSDN博客: http://blog.csdn.net/anticipate91
 //
 //  Created by Jht on 2016/11/28.
-//  Copyright © 2016年 Jht. All rights reserved.
+//  Copyright © 2016年 JhtGradientGuidePageVC. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -25,7 +25,7 @@
     self.view.backgroundColor = [UIColor orangeColor];
     
     UILabel *textLable = [[UILabel alloc] init];
-    textLable.text = @"已经进入App首页喽！！！";
+    textLable.text = @"已经进入App首页喽";
     textLable.textColor = [UIColor whiteColor];
     textLable.font = [UIFont boldSystemFontOfSize:18];
     [textLable sizeToFit];

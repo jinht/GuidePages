@@ -6,7 +6,7 @@
 //  CSDN博客: http://blog.csdn.net/anticipate91
 //
 //  Created by Jht on 2016/11/25.
-//  Copyright © 2016年 靳海涛. All rights reserved.
+//  Copyright © 2016年 JhtGradientGuidePageVC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -29,10 +29,14 @@ typedef void (^DidClickedEnter)();
 /** 点击<Enter>按钮触发方法 */
 @property (nonatomic, strong) DidClickedEnter didClickedEnter;
 
-/** 引导页退出切换动画类型（不传值为不添加切换动画，默认不添加动画）
- *  @"fade"(建议使用) || @"moveIn" || @"push" || @"reveal"
+/** 导页展示完成后切换至目标VC动画 时间
+ *  default：0.5f
  */
-@property (nonatomic, strong) NSString *exitAnimationType;
+@property (nonatomic, assign) CGFloat animationDuration;
+/** 引导页展示完成后切换至目标VC动画类型 
+ *	default：UIViewAnimationOptionTransitionCrossDissolve
+ */
+@property (nonatomic, assign) UIViewAnimationOptions animationOptions;
 
 /** 是否隐藏pageControl
  *  default：NO
@@ -52,21 +56,24 @@ typedef void (^DidClickedEnter)();
 #pragma mark - Public Method
 /** 初始化方法
  *  imageNames：引导图片数组
+ *	LRVC：引导页展示完成后出现的VC
  */
-- (id)initWithGuideImageNames:(NSArray *)imageNames;
+- (id)initWithGuideImageNames:(NSArray *)imageNames withLastRootViewController:(UIViewController *)LRVC;
 
 /** 初始化方法
  *  coverNames：封面图片名数组（多为带文字图片）
  *  bgNames：背景图片名数组
+ *	LRVC：引导页展示完成后出现的VC
  */
-- (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames;
+- (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames withLastRootViewController:(UIViewController *)LRVC;
 
 /** 初始化方法
  *  coverNames：封面图片名数组（多为带文字图片）
  *  bgNames：背景图片名数组
  *  withEnterButton：<Enter>按钮
+ *	LRVC：引导页展示完成后出现的VC
  */
-- (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames withEnterButton:(UIButton *)button;
+- (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames withEnterButton:(UIButton *)button withLastRootViewController:(UIViewController *)LRVC;
 
 
 @end

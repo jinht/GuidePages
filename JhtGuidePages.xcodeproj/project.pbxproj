@@ -449,7 +449,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/JhtGuidePages/JhtGuidePagesSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jht.JhtGuidePages;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JhtGuidePages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -466,7 +466,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/JhtGuidePages/JhtGuidePagesSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jht.JhtGuidePages;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JhtGuidePages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

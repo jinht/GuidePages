@@ -6,7 +6,7 @@
 //  CSDN博客: http://blog.csdn.net/anticipate91
 //
 //  Created by Jht on 2016/11/28.
-//  Copyright © 2016年 Jht. All rights reserved.
+//  Copyright © 2016年 JhtGradientGuidePageVC. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -40,10 +40,10 @@
         NSArray *coverImageNames = @[@"ggps_1_text", @"ggps_2_text", @"ggps_3_text", @"ggps_4_text"];
         
         // NO.1
-//        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithGuideImageNames:backgroundImageNames];
+//        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithGuideImageNames:backgroundImageNames withLastRootViewController:[[ViewController alloc] init]];
         
         // NO.2
-//        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames];
+//        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames withLastRootViewController:[[ViewController alloc] init]];
         
         // NO.3
         // case 1
@@ -55,12 +55,10 @@
 //        UIButton *enterButton = [[UIButton alloc] initWithFrame:CGRectMake((CGRectGetWidth([UIScreen mainScreen].bounds) - 100) / 2, CGRectGetHeight([UIScreen mainScreen].bounds) - 30 - 50, 100, 30)];
 //        [enterButton setBackgroundImage:[UIImage imageNamed:@"enter_btn"] forState:UIControlStateNormal];
         
-        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames withEnterButton:enterButton];
+        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithCoverImageNames:coverImageNames withBackgroundImageNames:backgroundImageNames withEnterButton:enterButton withLastRootViewController:[[ViewController alloc] init]];
         
         // 添加《跳过》按钮
         self.introductionView.isNeedSkipButton = YES;
-        // 引导页退出切换动画类型（不传值为不添加切换动画，默认不添加动画）
-        self.introductionView.exitAnimationType = @"fade";
         /******** 更多个性化配置见《JhtGradientGuidePageVC.h》 ********/
         
         self.window.rootViewController = self.introductionView;
@@ -75,8 +73,7 @@
                 [defaults synchronize];
             }
             
-            // 添加引导页退出切换动画时，切记这样写
-            [weakSelf.window.rootViewController.view addSubview:[[ViewController alloc] init].view];
+            weakSelf.introductionView = nil;
         };
     } else {
         self.window.rootViewController = [[ViewController alloc] init];
