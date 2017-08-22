@@ -41,7 +41,7 @@
 - (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames withEnterButton:(UIButton *)button;
 ```
 
-#### 3.2 导页展示完成后切换至目标VC动画
+##### 3.2 导页展示完成后切换至目标VC动画
 ```oc
 /** 导页展示完成后切换至目标VC 动画时间
  *  default：0.5f
@@ -53,7 +53,7 @@
 @property (nonatomic, assign) UIViewAnimationOptions animationOptions;
 ```
 
-#### 3.3 设置`pageControl`，可以通过以下参数设置pageControl
+##### 3.3 设置`pageControl`，可以通过以下参数设置pageControl
 ```oc
 /** 是否隐藏pageControl（默认不隐藏） */
 @property (nonatomic, assign) BOOL isHiddenPageControl;
@@ -63,7 +63,7 @@
 @property (nonatomic, strong) UIColor *pageIndicatorTintColor;
 ```
 
-##### 3.4 设置`<跳过>`按钮 && `exitAnimationType`
+##### 3.4 设置`<跳过>`按钮
 ```oc
 /** 是否添加<跳过>按钮（默认不需要） */
 @property (nonatomic, assign) BOOL isNeedSkipButton;
