@@ -51,17 +51,24 @@
 @property (nonatomic, strong) UIColor *pageIndicatorTintColor;
 ```
 
-##### 3.3 设置`<跳过>`按钮 && `exitAnimationType`
+#### 3.3 导页展示完成后切换至目标VC动画
+```oc
+/** 导页展示完成后切换至目标VC 动画时间
+ *  default：0.5f
+ */
+@property (nonatomic, assign) CGFloat animationDuration;
+/** 引导页展示完成后切换至目标VC 动画类型
+ *	default：UIViewAnimationOptionTransitionCrossDissolve
+ */
+@property (nonatomic, assign) UIViewAnimationOptions animationOptions;
+```
+
+##### 3.4 设置`<跳过>`按钮 && `exitAnimationType`
 ```oc
 /** 是否添加<跳过>按钮（默认不需要） */
 @property (nonatomic, assign) BOOL isNeedSkipButton;
 /** <跳过>按钮背景图片名 */
 @property (nonatomic, copy) NSString *skipButtonBackgroundImageName;
-
-/** 引导页退出切换动画类型（不传值为不添加切换动画，默认不添加动画）
- *  @"fade" || @"moveIn" || @"push" || @"reveal" 建议使用：@"fade" 类型
- */
-@property (nonatomic, copy) NSString *exitAnimationType;
 ```
 注：1.假使自己传入<跳过>按钮背景图片，需要注意一下大小，按钮大小设置是根据图片大小动态设置的<br>
 &emsp;&emsp;2.在添加引导页退出切换动画类型时，需要注意一下demo中`AppDelegate.m`的`didClickedEnter`block内部写法，如下：
