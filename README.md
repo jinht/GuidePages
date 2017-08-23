@@ -37,7 +37,7 @@
  *  coverNames：封面图片名数组（多为带文字图片）
  *  bgNames：背景图片名数组
  *  withEnterButton：<Enter>按钮
- *	LRVC：引导页展示完成后出现的VC
+ *  LRVC：引导页展示完成后出现的VC
  */
 - (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames withEnterButton:(UIButton *)button withLastRootViewController:(UIViewController *)LRVC;
 ```
@@ -49,7 +49,7 @@
  */
 @property (nonatomic, assign) CGFloat animationDuration;
 /** 引导页展示完成后切换至目标VC 动画类型
- *	default：UIViewAnimationOptionTransitionCrossDissolve
+ *  default：UIViewAnimationOptionTransitionCrossDissolve
  */
 @property (nonatomic, assign) UIViewAnimationOptions animationOptions;
 ```
