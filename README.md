@@ -37,8 +37,9 @@
  *  coverNames：封面图片名数组（多为带文字图片）
  *  bgNames：背景图片名数组
  *  withEnterButton：<Enter>按钮
+ *	LRVC：引导页展示完成后出现的VC
  */
-- (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames withEnterButton:(UIButton *)button;
+- (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames withEnterButton:(UIButton *)button withLastRootViewController:(UIViewController *)LRVC;
 ```
 
 ##### 3.2 导页展示完成后切换至目标VC动画
