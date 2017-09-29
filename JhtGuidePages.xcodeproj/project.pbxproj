@@ -15,8 +15,8 @@
 		A51F5A111DEC478300F48550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51F5A0F1DEC478300F48550 /* LaunchScreen.storyboard */; };
 		A51F5A1C1DEC478300F48550 /* JhtGuidePagesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A51F5A1B1DEC478300F48550 /* JhtGuidePagesTests.m */; };
 		A51F5A271DEC478300F48550 /* JhtGuidePagesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A51F5A261DEC478300F48550 /* JhtGuidePagesUITests.m */; };
-		A536FAD21DED747800819739 /* JhtGuidePagesSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A536FAD01DED747800819739 /* JhtGuidePagesSDK.a */; };
-		A536FAD31DED747800819739 /* skip_button.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A536FAD11DED747800819739 /* skip_button.bundle */; };
+		A5203A381F7DEE8E00272F6F /* JhtGuidePages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5203A361F7DEE7900272F6F /* JhtGuidePages.framework */; };
+		A5203A391F7DEFEB00272F6F /* skip_button.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5203A371F7DEE7900272F6F /* skip_button.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +53,8 @@
 		A51F5A221DEC478300F48550 /* JhtGuidePagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtGuidePagesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51F5A261DEC478300F48550 /* JhtGuidePagesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhtGuidePagesUITests.m; sourceTree = "<group>"; };
 		A51F5A281DEC478300F48550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A536FACF1DED747800819739 /* JhtGradientGuidePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JhtGradientGuidePageVC.h; sourceTree = "<group>"; };
-		A536FAD01DED747800819739 /* JhtGuidePagesSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JhtGuidePagesSDK.a; sourceTree = "<group>"; };
-		A536FAD11DED747800819739 /* skip_button.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = skip_button.bundle; sourceTree = "<group>"; };
+		A5203A361F7DEE7900272F6F /* JhtGuidePages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JhtGuidePages.framework; sourceTree = "<group>"; };
+		A5203A371F7DEE7900272F6F /* skip_button.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = skip_button.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A536FAD21DED747800819739 /* JhtGuidePagesSDK.a in Frameworks */,
+				A5203A381F7DEE8E00272F6F /* JhtGuidePages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,10 +86,12 @@
 		A51F59F51DEC478300F48550 = {
 			isa = PBXGroup;
 			children = (
+				A5203A351F7DEE7900272F6F /* JhtGuidePages_SDK */,
 				A51F5A001DEC478300F48550 /* JhtGuidePages */,
 				A51F5A1A1DEC478300F48550 /* JhtGuidePagesTests */,
 				A51F5A251DEC478300F48550 /* JhtGuidePagesUITests */,
 				A51F59FF1DEC478300F48550 /* Products */,
+				A5203A331F7DEDEC00272F6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,7 +112,6 @@
 				A51F5A051DEC478300F48550 /* AppDelegate.m */,
 				A51F5A071DEC478300F48550 /* ViewController.h */,
 				A51F5A081DEC478300F48550 /* ViewController.m */,
-				A536FACE1DED747800819739 /* JhtGuidePagesSDK */,
 				A51F5A0A1DEC478300F48550 /* Main.storyboard */,
 				A51F5A0D1DEC478300F48550 /* Assets.xcassets */,
 				A51F5A0F1DEC478300F48550 /* LaunchScreen.storyboard */,
@@ -147,14 +147,20 @@
 			path = JhtGuidePagesUITests;
 			sourceTree = "<group>";
 		};
-		A536FACE1DED747800819739 /* JhtGuidePagesSDK */ = {
+		A5203A331F7DEDEC00272F6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A536FACF1DED747800819739 /* JhtGradientGuidePageVC.h */,
-				A536FAD01DED747800819739 /* JhtGuidePagesSDK.a */,
-				A536FAD11DED747800819739 /* skip_button.bundle */,
 			);
-			path = JhtGuidePagesSDK;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5203A351F7DEE7900272F6F /* JhtGuidePages_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				A5203A361F7DEE7900272F6F /* JhtGuidePages.framework */,
+				A5203A371F7DEE7900272F6F /* skip_button.bundle */,
+			);
+			path = JhtGuidePages_SDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A536FAD31DED747800819739 /* skip_button.bundle in Resources */,
+				A5203A391F7DEFEB00272F6F /* skip_button.bundle in Resources */,
 				A51F5A111DEC478300F48550 /* LaunchScreen.storyboard in Resources */,
 				A51F5A0E1DEC478300F48550 /* Assets.xcassets in Resources */,
 				A51F5A0C1DEC478300F48550 /* Main.storyboard in Resources */,
@@ -442,13 +448,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BY48QUJK83;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/JhtGuidePages_SDK",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/JhtGuidePages_SDK/JhtGuidePages.framework/Headers";
 				INFOPLIST_FILE = JhtGuidePages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/JhtGuidePages/JhtGuidePagesSDK",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JhtGuidePages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -459,13 +468,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BY48QUJK83;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/JhtGuidePages_SDK",
+				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/JhtGuidePages_SDK/JhtGuidePages.framework/Headers";
 				INFOPLIST_FILE = JhtGuidePages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/JhtGuidePages/JhtGuidePagesSDK",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JhtGuidePages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

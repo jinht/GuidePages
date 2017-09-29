@@ -11,7 +11,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "JhtGradientGuidePageVC.h"
+#import <JhtGuidePages/JhtGradientGuidePageVC.h>
 
 @interface AppDelegate ()
 /** 引导页VC */

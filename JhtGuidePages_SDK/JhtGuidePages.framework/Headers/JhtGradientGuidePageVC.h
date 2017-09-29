@@ -26,14 +26,14 @@
 @property (nonatomic, strong) UIButton *enterButton;
 /** 点击<跳过>/<Enter>按钮回调Block */
 typedef void (^DidClickedEnter)();
-/** 点击<Enter>按钮触发方法 */
+/** 点击<Enter>按钮 回调 */
 @property (nonatomic, strong) DidClickedEnter didClickedEnter;
 
-/** 导页展示完成后切换至目标VC动画 时间
+/** 导页展示完成后切换至目标VC 动画时间
  *  default：0.5f
  */
 @property (nonatomic, assign) CGFloat animationDuration;
-/** 引导页展示完成后切换至目标VC动画类型 
+/** 引导页展示完成后切换至目标VC 动画类型
  *	default：UIViewAnimationOptionTransitionCrossDissolve
  */
 @property (nonatomic, assign) UIViewAnimationOptions animationOptions;
