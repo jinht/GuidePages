@@ -1,85 +1,173 @@
 ## GuidePages
-#### 引导页/首次安装引导页/APP介绍页/功能介绍页
+#### boot page / first install guide page / APP introduction page / function introduction page
 
 
-### 先上图，看一下是否符合你的场景吧！
-<img src="https://raw.githubusercontent.com/jinht/GuidePages/master/ReadMEImages/Gif/first.gif" width=230 height=410 />&emsp;<img src="https://raw.githubusercontent.com/jinht/GuidePages/master/ReadMEImages/Gif/third.gif" width=230 height=410 />
+### first on the map, look at whether you meet the scene!
+lt; / RTI & githubusercontent.com/jinht/GuidePages/master/ReadMEImages/Gif/third.gif "width = 230 height = 410 />
 
 
 ### Function Description
-1. 传统引导页功能
-2. 引导页之间渐变切换
-3. 简洁的个性化设置UI及切换动画<br>
+1. Traditional boot page function
+2. Gradient switch between guide pages
+3. Simple and personalized settings UI and switch animation
 
 
 ### How to use
-#### 1. 传统引导页功能：通过传入图片名数组即可
-```oc
-/** 初始化方法
- *  coverNames：封面图片名数组（多为带文字图片）
- */
-- (id)initWithCoverImageNames:(NSArray *)coverNames;
-```
+#### 1. Traditional boot page function: by passing in the picture name array can be
+`` `oc
+/ ** initialization method
+ * coverNames: cover picture name array (mostly with text picture)
+ * /
+- (id) initWithCoverImageNames: (NSArray *) coverNames;
+`` ``
 
-#### 2. 引导页之间渐变切换：通过传入封面图片名数组（多为带文字图片）和背景图片名数组即可
-```oc
-/** 初始化方法
- *  coverNames：封面图片名数组（多为带文字图片）
- *  bgNames：背景图片名数组
- */
-- (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames;
-```
+#### 2. Tap between the tap switch: through the incoming cover picture name array (mostly with text picture) and the background picture name array can be
+`` `oc
+/ ** initialization method
+ * coverNames: cover picture name array (mostly with text picture)
+ * bgNames: background image name array
+ * /
+- (id) initWithCoverImageNames: (NSArray *) coverNames withBackgroundImageNames: (NSArray *) bgNames;
+`` ``
 
-#### 3 简洁的个性化UI设置及切换动画
-##### 3.1 设置`<Enter>`按钮，可以通过初始化方法传入自己定制的`<Enter>`按钮（按钮frame亦可以自己定制）
-```oc
-/** 初始化方法
- *  coverNames：封面图片名数组（多为带文字图片）
- *  bgNames：背景图片名数组
- *  withEnterButton：<Enter>按钮
- *  LRVC：引导页展示完成后出现的VC
- */
-- (id)initWithCoverImageNames:(NSArray *)coverNames withBackgroundImageNames:(NSArray *)bgNames withEnterButton:(UIButton *)button withLastRootViewController:(UIViewController *)LRVC;
-```
+#### 3 Simple personalized UI settings and switch animation
+##### 3.1 Setting the `<Enter>` button allows you to pass in your own custom `<Enter>` button (the button frame can also be customized)
+`` `oc
+/ ** initialization method
+ * coverNames: cover picture name array (mostly with text picture)
+ * bgNames: background image name array
+ * withEnterButton: <Enter> button
+ * LRVC: VC appears after the boot page is displayed
+ * /
+- (id) initWithCoverImageNames: (NSArray *) coverNames withBackgroundImageNames: (NSArray *) bgNames withEnterButton: (UIButton *) button withLastRootViewController: (UIViewController *) LRVC;
+`` ``
 
-##### 3.2 导页展示完成后切换至目标VC动画
-```oc
-/** 导页展示完成后切换至目标VC 动画时间
- *  default：0.5f
- */
+##### 3.2 When the guide page is displayed, switch to the target VC animation
+`` `oc
+/ ** After the guide page is displayed, switch to the target VC animation time
+ * default: 0.5f
+ * /
 @property (nonatomic, assign) CGFloat animationDuration;
-/** 引导页展示完成后切换至目标VC 动画类型
- *  default：UIViewAnimationOptionTransitionCrossDissolve
- */
+/ ** After the guide page is displayed, switch to the target VC animation type
+ * default: UIViewAnimationOptionTransitionCrossDissolve
+ * /
 @property (nonatomic, assign) UIViewAnimationOptions animationOptions;
-```
+`` ``
 
-##### 3.3 设置`pageControl`，可以通过以下参数设置pageControl
-```oc
-/** 是否隐藏pageControl（默认不隐藏） */
+##### 3.3 Set `pageControl`, you can set the pageControl with the following parameters
+`` `oc
+/ ** whether to hide pageControl (default is not hidden) * /
 @property (nonatomic, assign) BOOL isHiddenPageControl;
-/** pageControl的Y坐标(默认距离底部30.0)  */
+/ ** The Y coordinate of the pageControl (default distance 30.0) * /
 @property (nonatomic, assign) CGFloat pageControlY;
-/** pageControl的pageIndicatorTintColor（默认[UIColor grayColor]） */
-@property (nonatomic, strong) UIColor *pageIndicatorTintColor;
-```
+/ ** pageControl's pageIndicatorTintColor (default [UIColor grayColor]) * /
+@property (nonatomic, strong) UIColor * pageIndicatorTintColor;
+`` ``
 
-##### 3.4 设置`<跳过>`按钮
-```oc
-/** 是否添加<跳过>按钮（默认不需要） */
+##### 3.4 Set the `<Skip>` button
+`` `oc
+/ ** whether to add <skip> button (not required by default) * /
 @property (nonatomic, assign) BOOL isNeedSkipButton;
-/** <跳过>按钮背景图片名 */
-@property (nonatomic, copy) NSString *skipButtonBackgroundImageName;
-```
-注：假使自己传入<跳过>按钮背景图片，需要注意一下大小，按钮大小设置是根据图片大小动态设置的
-    
+/ ** <skip> button background image name * /
+@property (nonatomic, copy) NSString * skipButtonBackgroundImageName;
+`` ``
+Note: If you pass in the <skip> button background image, you need to pay attention to the size, button size settings are dynamically set according to the size of the picture
+    
 
 ### Remind
 * ARC
-* iOS >= 8.0
-* iPhone \ iPad 
-       
+* iOS> = 8.0
+* iPhone \ iPad
+       
 
 ## Hope
-* If you find bug when used，Hope you can Issues me，Thank you or try to download the latest code of this framework to see the BUG has been fixed or not
-* If you find the function is not enough when used，Hope you can Issues me，I very much to add more useful function to this framework ，Thank you !
+* If you find bug when used, Hope you can Issues me, Thank you or try to download the latest code of this framework to see the BUG has been fixed or not
+* If you find the function is not enough when used, Hope you can Issues me, I very much to add more useful function to this framework, Thank you!
+
+
+# English Version:
+## GuidePages
+#### boot page / first install guide page / APP introduction page / function introduction page
+
+
+### first on the map, look at whether you meet the scene!
+lt; / RTI & githubusercontent.com/jinht/GuidePages/master/ReadMEImages/Gif/third.gif "width = 230 height = 410 />
+
+
+### Function Description
+1. Traditional boot page function
+2. Gradient switch between guide pages
+3. Simple and personalized settings UI and switch animation
+
+
+### How to use
+#### 1. Traditional boot page function: by passing in the picture name array can be
+`` `oc
+/ ** initialization method
+ * coverNames: cover picture name array (mostly with text picture)
+ * /
+- (id) initWithCoverImageNames: (NSArray *) coverNames;
+`` ``
+
+#### 2. Tap between the tap switch: through the incoming cover picture name array (mostly with text picture) and the background picture name array can be
+`` `oc
+/ ** initialization method
+ * coverNames: cover picture name array (mostly with text picture)
+ * bgNames: background image name array
+ * /
+- (id) initWithCoverImageNames: (NSArray *) coverNames withBackgroundImageNames: (NSArray *) bgNames;
+`` ``
+
+#### 3 Simple personalized UI settings and switch animation
+##### 3.1 Setting the `<Enter>` button allows you to pass in your own custom `<Enter>` button (the button frame can also be customized)
+`` `oc
+/ ** initialization method
+ * coverNames: cover picture name array (mostly with text picture)
+ * bgNames: background image name array
+ * withEnterButton: <Enter> button
+ * LRVC: VC appears after the boot page is displayed
+ * /
+- (id) initWithCoverImageNames: (NSArray *) coverNames withBackgroundImageNames: (NSArray *) bgNames withEnterButton: (UIButton *) button withLastRootViewController: (UIViewController *) LRVC;
+`` ``
+
+##### 3.2 When the guide page is displayed, switch to the target VC animation
+`` `oc
+/ ** After the guide page is displayed, switch to the target VC animation time
+ * default: 0.5f
+ * /
+@property (nonatomic, assign) CGFloat animationDuration;
+/ ** After the guide page is displayed, switch to the target VC animation type
+ * default: UIViewAnimationOptionTransitionCrossDissolve
+ * /
+@property (nonatomic, assign) UIViewAnimationOptions animationOptions;
+`` ``
+
+##### 3.3 Set `pageControl`, you can set the pageControl with the following parameters
+`` `oc
+/ ** whether to hide pageControl (default is not hidden) * /
+@property (nonatomic, assign) BOOL isHiddenPageControl;
+/ ** The Y coordinate of the pageControl (default distance 30.0) * /
+@property (nonatomic, assign) CGFloat pageControlY;
+/ ** pageControl's pageIndicatorTintColor (default [UIColor grayColor]) * /
+@property (nonatomic, strong) UIColor * pageIndicatorTintColor;
+`` ``
+
+##### 3.4 Set the `<Skip>` button
+`` `oc
+/ ** whether to add <skip> button (not required by default) * /
+@property (nonatomic, assign) BOOL isNeedSkipButton;
+/ ** <skip> button background image name * /
+@property (nonatomic, copy) NSString * skipButtonBackgroundImageName;
+`` ``
+Note: If you pass in the <skip> button background image, you need to pay attention to the size, button size settings are dynamically set according to the size of the picture
+    
+
+### Remind
+* ARC
+* iOS> = 8.0
+* iPhone \ iPad
+       
+
+## Hope
+* If you find bug when used, Hope you can Issues me, Thank you or try to download the latest code of this framework to see the BUG has been fixed or not
+* If you find the function is not enough when used, Hope you can Issues me, I very much to add more useful function to this framework, Thank you!
