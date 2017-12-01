@@ -11,7 +11,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import <JhtGuidePages/JhtGradientGuidePageVC.h>
+#import "JhtGradientGuidePageVC.h"
 
 @interface AppDelegate ()
 /** 引导页VC */
@@ -35,9 +35,20 @@
     NSString *firstKey = [NSString stringWithFormat:@"isFirst%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
     NSString *isFirst = [defaults objectForKey:firstKey];
     
+    NSMutableArray *backgroundImageNames = [NSMutableArray arrayWithCapacity:4];
+    NSMutableArray *coverImageNames = [NSMutableArray arrayWithCapacity:4];
     if (!isFirst.length) {
-        NSArray *backgroundImageNames = @[@"ggps_1_bg", @"ggps_2_bg", @"ggps_3_bg", @"ggps_4_bg"];
-        NSArray *coverImageNames = @[@"ggps_1_text", @"ggps_2_text", @"ggps_3_text", @"ggps_4_text"];
+        for (NSInteger i = 1; i < 5; i ++) {
+            NSString *temp1 = [NSString stringWithFormat:@"ggps_%ld_bg", i];
+            NSString *temp2 = [NSString stringWithFormat:@"ggps_%ld_text", i];
+            if ([[UIApplication sharedApplication] statusBarFrame].size.height > 20) {
+                temp1 = [NSString stringWithFormat:@"x_%@", temp1];
+                temp2 = [NSString stringWithFormat:@"x_%@", temp2];
+            }
+            
+            [backgroundImageNames addObject:temp1];
+            [coverImageNames addObject:temp2];
+        }
         
         // NO.1
 //        self.introductionView = [[JhtGradientGuidePageVC alloc] initWithGuideImageNames:backgroundImageNames withLastRootViewController:[[ViewController alloc] init]];
@@ -75,6 +86,7 @@
             
             weakSelf.introductionView = nil;
         };
+        
     } else {
         self.window.rootViewController = [[ViewController alloc] init];
     }

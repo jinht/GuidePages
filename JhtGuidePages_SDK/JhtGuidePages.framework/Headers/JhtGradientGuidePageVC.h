@@ -22,7 +22,7 @@
 /** <跳过>按钮背景图片名（动态获取图片大小） */
 @property (nonatomic, strong) NSString *skipButtonBackgroundImageName;
 
-/** 滑动到最后一张图片后出现的<Enter>按钮 */
+/** 滑动到最后一张图片后出现的 <Enter>按钮 */
 @property (nonatomic, strong) UIButton *enterButton;
 /** 点击<跳过>/<Enter>按钮回调Block */
 typedef void (^DidClickedEnter)();
@@ -54,6 +54,7 @@ typedef void (^DidClickedEnter)();
 
 
 #pragma mark - Public Method
+/***** 由于iPhone X屏幕尺寸不同于其之前屏幕尺寸比例，为保证显示效果，建议使用不同图片 *****/
 /** 初始化方法
  *  imageNames：引导图片数组
  *	LRVC：引导页展示完成后出现的VC
