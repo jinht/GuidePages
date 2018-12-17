@@ -13,8 +13,6 @@
 		A51F5A0C1DEC478300F48550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51F5A0A1DEC478300F48550 /* Main.storyboard */; };
 		A51F5A0E1DEC478300F48550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51F5A0D1DEC478300F48550 /* Assets.xcassets */; };
 		A51F5A111DEC478300F48550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51F5A0F1DEC478300F48550 /* LaunchScreen.storyboard */; };
-		A51F5A1C1DEC478300F48550 /* JhtGuidePagesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A51F5A1B1DEC478300F48550 /* JhtGuidePagesTests.m */; };
-		A51F5A271DEC478300F48550 /* JhtGuidePagesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A51F5A261DEC478300F48550 /* JhtGuidePagesUITests.m */; };
 		A5203A381F7DEE8E00272F6F /* JhtGuidePages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5203A361F7DEE7900272F6F /* JhtGuidePages.framework */; };
 		A5203A391F7DEFEB00272F6F /* skip_button.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A5203A371F7DEE7900272F6F /* skip_button.bundle */; };
 /* End PBXBuildFile section */
@@ -48,11 +46,7 @@
 		A51F5A101DEC478300F48550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A51F5A121DEC478300F48550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A51F5A171DEC478300F48550 /* JhtGuidePagesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtGuidePagesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A51F5A1B1DEC478300F48550 /* JhtGuidePagesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhtGuidePagesTests.m; sourceTree = "<group>"; };
-		A51F5A1D1DEC478300F48550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A51F5A221DEC478300F48550 /* JhtGuidePagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JhtGuidePagesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A51F5A261DEC478300F48550 /* JhtGuidePagesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JhtGuidePagesUITests.m; sourceTree = "<group>"; };
-		A51F5A281DEC478300F48550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5203A361F7DEE7900272F6F /* JhtGuidePages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JhtGuidePages.framework; sourceTree = "<group>"; };
 		A5203A371F7DEE7900272F6F /* skip_button.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = skip_button.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,10 +82,7 @@
 			children = (
 				A5203A351F7DEE7900272F6F /* JhtGuidePages_SDK */,
 				A51F5A001DEC478300F48550 /* JhtGuidePages */,
-				A51F5A1A1DEC478300F48550 /* JhtGuidePagesTests */,
-				A51F5A251DEC478300F48550 /* JhtGuidePagesUITests */,
 				A51F59FF1DEC478300F48550 /* Products */,
-				A5203A331F7DEDEC00272F6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,31 +118,6 @@
 				A51F5A021DEC478300F48550 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A51F5A1A1DEC478300F48550 /* JhtGuidePagesTests */ = {
-			isa = PBXGroup;
-			children = (
-				A51F5A1B1DEC478300F48550 /* JhtGuidePagesTests.m */,
-				A51F5A1D1DEC478300F48550 /* Info.plist */,
-			);
-			path = JhtGuidePagesTests;
-			sourceTree = "<group>";
-		};
-		A51F5A251DEC478300F48550 /* JhtGuidePagesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A51F5A261DEC478300F48550 /* JhtGuidePagesUITests.m */,
-				A51F5A281DEC478300F48550 /* Info.plist */,
-			);
-			path = JhtGuidePagesUITests;
-			sourceTree = "<group>";
-		};
-		A5203A331F7DEDEC00272F6F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A5203A351F7DEE7900272F6F /* JhtGuidePages_SDK */ = {
@@ -308,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51F5A1C1DEC478300F48550 /* JhtGuidePagesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51F5A271DEC478300F48550 /* JhtGuidePagesUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
